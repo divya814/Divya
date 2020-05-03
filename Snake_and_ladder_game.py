@@ -3,7 +3,7 @@ from PIL import Image
 import random
 end=100
 def show_board():
-    img=Image.open("snakes-and-ladders.jpg")
+    img=Image.open("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fsnakes-and-ladders-vector-413056&psig=AOvVaw3B1B_oOzvDWtS6254ltUoG&ust=1588585229726000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjw8KOzl-kCFQAAAAAdAAAAABAO")
     img.show()
 
 def check_ladder(points):
