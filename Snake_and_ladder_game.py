@@ -3,7 +3,7 @@ from PIL import Image
 import random
 end=100
 def show_board():
-    img=Image.open("Downloads/snakes-and-ladders.jpg")
+    img=Image.open("snakes-and-ladders.jpg")
     img.show()
 
 def check_ladder(points):
