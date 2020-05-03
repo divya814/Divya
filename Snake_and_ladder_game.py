@@ -116,45 +116,47 @@ def play():
         if turn%2==0:
             print(p1_name," your turn")
             # ask player's choice to continue
-            c=input("Press 1 to continue and 0 to quit")
+            c=int(input("Press 1 to continue and 0 to quit "))
             if c==0:
-                print(p1_name, "scored ",point_1)
-                print(p2_name, "scored ",point_2)
-                print("Quitting the game, Thanks for playing")
+                print(p1_name, "scored ",points_1)
+                print(p2_name, "scored ",points_2)
+                print("Quited the game, Thanks for playing")
                 break
-            # dice rolls, generating a no. from 1 to 6
-            dice=random.randint(1,6)
-            print("Dice showed: ",dice)
-            points_1 += dice
-            points_1 = check_ladder(points_1)
-            points_1= check_snake(points_1)
-            if points_1>end:
-                points_1=end
-            print(p1_name," Your score: ",points_1)
-            if reached_end(points_1):
-                print(p1_name, "Won!!!")
-                break
+            else:
+                # dice rolls, generating a no. from 1 to 6
+                dice=random.randint(1,6)
+                print("Dice showed: ",dice)
+                points_1 += dice
+                points_1 = check_ladder(points_1)
+                points_1= check_snake(points_1)
+                if points_1>end:
+                    points_1=end
+                print(p1_name," Your score: ",points_1)
+                if reached_end(points_1):
+                    print(p1_name, "Won!!!")
+                    break
         else:
             print(p2_name," your turn")
             # ask player's choice to continue
-            c=input("Press 1 to continue and 0 to quit")
+            c=int(input("Press 1 to continue and 0 to quit "))
             if c==0:
-                print(p1_name, "scored ",point_1)
-                print(p2_name, "scored ",point_2)
-                print("Quitting the game, Thanks for playing")
+                print(p1_name, "scored ",points_1)
+                print(p2_name, "scored ",points_2)
+                print("Quited the game, Thanks for playing")
                 break
-            # dice rolls, generating a no. from 1 to 6
-            dice=random.randint(1,6)
-            print("Dice showed: ",dice)
-            points_2 += dice
-            points_2 = check_ladder(points_2)
-            points_2= check_snake(points_2)
-            if points_2>end:
-                points_2=end
-            print(p2_name," Your score: ",points_2)
-            if reached_end(points_2):
-                print(p2_name, "Won!!!")
-                break
+            else:
+                # dice rolls, generating a no. from 1 to 6
+                dice=random.randint(1,6)
+                print("Dice showed:",dice)
+                points_2 += dice
+                points_2 = check_ladder(points_2)
+                points_2= check_snake(points_2)
+                if points_2>end:
+                    points_2=end
+                print(p2_name,"Your score:",points_2)
+                if reached_end(points_2):
+                    print(p2_name, "Won!!!")
+                    break
         turn += 1
             
             
